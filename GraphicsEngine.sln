@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLTKGraphicsApp", "FLTKGraphicsApp.vcxproj", "{E9F23020-F440-47E8-8008-993E9304A784}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLTKGraphicsApp", "FLTKGraphicsApp\FLTKGraphicsApp.vcxproj", "{E9F23020-F440-47E8-8008-993E9304A784}"
 	ProjectSection(ProjectDependencies) = postProject
 		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F} = {B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsEngine", "..\GraphicsEngine\GraphicsEngine.vcxproj", "{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsEngine", "GraphicsEngine\GraphicsEngine.vcxproj", "{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
