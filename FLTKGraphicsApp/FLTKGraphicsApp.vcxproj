@@ -53,6 +53,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)/../GraphicsEngine/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>GraphicsEngine.lib;assimp.lib;opengl32.lib;glew32.lib;fltkd.lib;fltkgld.lib;FreeImaged.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>fltkd.lib;fltkgld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -70,6 +74,10 @@
       <AdditionalLibraryDirectories>$(ProjectDir)/../GraphicsEngine/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>GraphicsEngine.lib;assimp.lib;opengl32.lib;glew32.lib;fltk.lib;fltkgl.lib;FreeImage.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>fltk.lib;fltkgl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FLTKGraphicsWindow.cpp" />

@@ -21,12 +21,16 @@ void idle(void* requiredArgument = NULL)
 	static Timer timer;
 	timer.stop();
 	float dt = (float)(timer.getElapsedTimeInMicroSec() / 1000000.0f);
+	if (!gApp)
+		FatalError(string("FLTK idle function: app is NULL - Did you forget to set it?"))
 	gApp->Timestep(dt);
 	timer.start();
 }
 
 int GraphicsApp::Launch(GraphicsApp* app, const std::string& paramFilename, int argc, char** argv)
 {
+	gApp = app;
+
 	// Initialize the app
 	app->Init("Parameters.txt");
 
