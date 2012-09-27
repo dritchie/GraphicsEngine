@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}</ProjectGuid>
+    <RootNamespace>GraphicsEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\assimp\workspaces\vc10\shared\FastSTL.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\assimp\workspaces\vc10\shared\FastSTL.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/../;$(ProjectDir)/../assimp/include/;$(ProjectDir)/../FreeImage/Dist/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)/../;$(ProjectDir)/../assimp/include/;$(ProjectDir)/../FreeImage/Dist/</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\GraphicsAppParams.cpp" />
+    <ClCompile Include="Application\GraphicsContext.cpp" />
+    <ClCompile Include="Assets\Light\Light.cpp" />
+    <ClCompile Include="Assets\Light\MultiLightSystem.cpp" />
+    <ClCompile Include="Assets\Light\SingleLightSystem.cpp" />
+    <ClCompile Include="Assets\Material\ConstantMaterial.cpp" />
+    <ClCompile Include="Assets\Material\PhongBSDF.cpp" />
+    <ClCompile Include="Assets\Material\ScatteringMaterial.cpp" />
+    <ClCompile Include="Assets\Material\SmoothDiffGeo.cpp" />
+    <ClCompile Include="Assets\Mesh\CommonMesh.cpp" />
+    <ClCompile Include="Assets\Mesh\CommonMeshGeometry.cpp" />
+    <ClCompile Include="Assets\Mesh\CommonMeshIO.cpp" />
+    <ClCompile Include="Assets\Mesh\GeneralMesh.cpp" />
+    <ClCompile Include="Assets\Mesh\GLStaticMeshData.cpp" />
+    <ClCompile Include="Assets\ShaderAsset.cpp" />
+    <ClCompile Include="Assets\ShaderExpressions.cpp" />
+    <ClCompile Include="Assets\Shader\Shader.cpp" />
+    <ClCompile Include="Assets\Shader\ShaderProgram.cpp" />
+    <ClCompile Include="Assets\Shader\UberShader.cpp" />
+    <ClCompile Include="Assets\Texture\Texture.cpp" />
+    <ClCompile Include="Assets\Texture\Texture2D.cpp" />
+    <ClCompile Include="Assets\UniformSources.cpp" />
+    <ClCompile Include="Common\Common.cpp" />
+    <ClCompile Include="Math\Transform.cpp" />
+    <ClCompile Include="Math\TransformStack.cpp" />
+    <ClCompile Include="Utility\FileSystem.cpp" />
+    <ClCompile Include="Utility\MacroPreprocessor.cpp" />
+    <ClCompile Include="Utility\Timer.cpp" />
+    <ClCompile Include="Viewing\Camera.cpp" />
+    <ClCompile Include="Viewing\FPSCamera.cpp" />
+    <ClCompile Include="Viewing\MayaCamera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\GraphicsAppParams.h" />
+    <ClInclude Include="Application\GraphicsContext.h" />
+    <ClInclude Include="Application\Keys.h" />
+    <ClInclude Include="Assets\Light\Light.h" />
+    <ClInclude Include="Assets\Light\LightSystem.h" />
+    <ClInclude Include="Assets\Light\MultiLightSystem.h" />
+    <ClInclude Include="Assets\Light\SingleLightSystem.h" />
+    <ClInclude Include="Assets\Material\BSDF.h" />
+    <ClInclude Include="Assets\Material\ConstantMaterial.h" />
+    <ClInclude Include="Assets\Material\DiffGeo.h" />
+    <ClInclude Include="Assets\Material\Material.h" />
+    <ClInclude Include="Assets\Material\PhongBSDF.h" />
+    <ClInclude Include="Assets\Material\ScatteringMaterial.h" />
+    <ClInclude Include="Assets\Material\SmoothDiffGeo.h" />
+    <ClInclude Include="Assets\Mesh\CommonMesh.h" />
+    <ClInclude Include="Assets\Mesh\GeneralMesh.h" />
+    <ClInclude Include="Assets\Mesh\GLStaticMeshData.h" />
+    <ClInclude Include="Assets\ShaderAsset.h" />
+    <ClInclude Include="Assets\ShaderExpressions.h" />
+    <ClInclude Include="Assets\Shader\Shader.h" />
+    <ClInclude Include="Assets\Shader\ShaderProgram.h" />
+    <ClInclude Include="Assets\Shader\UberShader.h" />
+    <ClInclude Include="Assets\Texture\Texture.h" />
+    <ClInclude Include="Assets\Texture\Texture2D.h" />
+    <ClInclude Include="Assets\UniformSources.h" />
+    <ClInclude Include="Common\Common.h" />
+    <ClInclude Include="Common\GL.h" />
+    <ClInclude Include="Math\Math.h" />
+    <ClInclude Include="Math\Transform.h" />
+    <ClInclude Include="Math\TransformStack.h" />
+    <ClInclude Include="Utility\FileSystem.h" />
+    <ClInclude Include="Utility\MacroPreprocessor.h" />
+    <ClInclude Include="Utility\Timer.h" />
+    <ClInclude Include="Viewing\Camera.h" />
+    <ClInclude Include="Viewing\FPSCamera.h" />
+    <ClInclude Include="Viewing\MayaCamera.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shader\GLSL\Constant.Material" />
+    <None Include="Assets\Shader\GLSL\Light" />
+    <None Include="Assets\Shader\GLSL\Multi.LightSystem" />
+    <None Include="Assets\Shader\GLSL\Phong.BSDF" />
+    <None Include="Assets\Shader\GLSL\Scattering.Material" />
+    <None Include="Assets\Shader\GLSL\Single.LightSystem" />
+    <None Include="Assets\Shader\GLSL\Smooth.DiffGeo" />
+    <None Include="Assets\Shader\GLSL\Uber.frag" />
+    <None Include="Assets\Shader\GLSL\Uber.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

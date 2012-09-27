@@ -1,0 +1,24 @@
+#ifndef INCLUDE_MULTI_LIGHT_SYSTEM
+#define INCLUDE_MULTI_LIGHT_SYSTEM
+
+#include "Light"
+
+#block BSDF
+
+uniform Light lights[MAX_NUM_LIGHTS];
+uniform int NumLights;
+
+vec4 LightSystem_Illuminate(in vec3 p, in vec3 n, in vec3 wEye)
+{
+	vec4 result = BSDF_Ambient();
+	for (int i = 0; i < NumLights; i++)
+	{
+		vec3 vecToLight = Light_VectorTo(lights[i], p);
+		vec3 wLight = normalize(vecToLight);
+		vec4 bsdfVal = BSDF_DirectLighting(n, wLight, wEye);
+		result += bsdfVal * Light_Intensity(lights[i], vecToLight);
+	}
+	return result;
+}
+
+#endif

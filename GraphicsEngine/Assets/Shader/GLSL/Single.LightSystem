@@ -1,0 +1,20 @@
+#ifndef INCLUDE_SINGLE_LIGHT_SYSTEM
+#define INCLUDE_SINGLE_LIGHT_SYSTEM
+
+#include "Light"
+
+#block BSDF
+
+uniform Light light;
+
+vec4 LightSystem_Illuminate(in vec3 p, in vec3 n, in vec3 wEye)
+{
+	vec4 result = BSDF_Ambient();
+	vec3 vecToLight = Light_VectorTo(light, p);
+	vec3 wLight = normalize(vecToLight);
+	vec4 bsdfVal = BSDF_DirectLighting(n, wLight, wEye);
+	result += bsdfVal * Light_Intensity(light, vecToLight);
+	return result;
+}
+
+#endif

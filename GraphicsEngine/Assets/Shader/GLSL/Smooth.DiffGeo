@@ -1,0 +1,10 @@
+#ifndef INCLUDE_SMOOTH_DIFF_GEO
+#define INCLUDE_SMOOTH_DIFF_GEO
+
+vec3 DiffGeo_Normal()
+{
+	// Assume the Normal has been plumbed through for us
+	return normalize(Normal);
+}
+
+#endif

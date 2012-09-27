@@ -1,0 +1,11 @@
+#ifndef INCLUDE_CONSTANT_MATERIAL
+#define INCLUDE_CONSTANT_MATERIAL
+
+uniform vec4 constant_material_color;
+
+vec4 Material_Evaluate()
+{
+	return constant_material_color;
+}
+
+#endif

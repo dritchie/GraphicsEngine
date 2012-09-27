@@ -1,0 +1,17 @@
+#ifndef INCLUDE_SCATTERING_MATERIAL
+#define INCLUDE_SCATTERING_MATERIAL
+
+#block DIFF_GEO
+
+#block LIGHT_SYSTEM
+
+
+vec4 Material_Evaluate()
+{
+	vec3 p = Vertex;
+	vec3 n = DiffGeo_Normal();
+	vec3 wEye = normalize(-p);
+	return LightSystem_Illuminate(p, n, wEye);
+}
+
+#endif

@@ -1,0 +1,25 @@
+#ifndef INCLUDE_PHONG_BSDF
+#define INCLUDE_PHONG_BSDF
+
+// UniformSources
+#block PHONG_KA
+#block PHONG_KD
+#block PHONG_KS
+#block PHONG_SHINE
+
+vec4 BSDF_Ambient()
+{
+	return PHONG_KA_Eval();
+}
+
+vec4 BSDF_DirectLighting(in vec3 n, in vec3 wLight, in vec3 wEye)
+{
+	vec4 diffuseComp = PHONG_KD_Eval() * max(dot(n, wLight), 0.0);
+
+	vec3 r = -reflect(wLight, n);
+	vec4 specComp = PHONG_KS_Eval() * pow(max(dot(r, wEye), 0.0), PHONG_SHINE_Eval());
+
+	return diffuseComp + specComp;
+}
+
+#endif

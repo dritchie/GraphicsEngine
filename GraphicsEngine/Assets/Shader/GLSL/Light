@@ -1,0 +1,51 @@
+#ifndef INCLUDE_LIGHT
+#define INCLUDE_LIGHT
+
+struct Light
+{
+	int lightType;	// 0 = point, 1 = directional
+	vec3 pos;
+	vec3 dir;
+	vec4 col;
+	float spotExp;
+	float spotCutoff;
+	float attenConst;
+	float attenLin;
+	float attenQuad;
+};
+
+vec3 Light_VectorTo(in Light light, in vec3 pos)
+{
+	if (light.lightType == 0)
+		return light.pos - pos;
+	else if (light.lightType == 1)
+		return -light.dir;
+}
+
+vec4 Light_Intensity(in Light light, in vec3 vectorToLight)
+{
+	vec4 intense;
+
+	if (light.lightType == 0)
+	{
+		float d = length(vectorToLight);
+		intense =  (1.0 / (light.attenConst + d*light.attenLin + d*d*light.attenQuad)) * light.col;
+	}
+	else if (light.lightType == 1)
+	{
+		intense = light.col;
+	}
+
+	if (light.spotCutoff > -1.0)
+	{
+		float dotval = dot(normalize(-vectorToLight), light.dir);
+		if (dotval > light.spotCutoff)
+			intense *= pow(dotval, light.spotExp);
+		else
+			intense = vec4(0, 0, 0, 0);
+	}
+
+	return intense;
+}
+
+#endif

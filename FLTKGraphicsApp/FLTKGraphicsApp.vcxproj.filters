@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="FLTKGraphicsWindow.cpp" />
+    <ClCompile Include="GraphicsApp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FLTKGraphicsWindow.h" />
+    <ClInclude Include="GraphicsApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Parameters.txt" />
+  </ItemGroup>
+</Project>

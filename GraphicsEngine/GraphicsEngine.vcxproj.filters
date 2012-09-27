@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{cea6aa50-e5dc-4b1f-9afb-f5ca067d4b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{8f89aca7-915c-4a6a-8aca-420c8bf5ae6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Viewing">
+      <UniqueIdentifier>{3cc05d77-964b-4d29-9866-b637d6992f23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{e629a221-8617-4aa6-abf6-b45514aa7eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{c8bdbda7-d273-4d0f-af78-29b7288a3768}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{20ff3d27-4f6c-4b94-9e0a-9f853a9f1f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Mesh">
+      <UniqueIdentifier>{0e9d79a8-16da-44e6-a2f1-a1f9432229b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Texture">
+      <UniqueIdentifier>{133311e6-6522-4027-af2a-8176879d37dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shader">
+      <UniqueIdentifier>{bda95927-67c4-46cf-8e70-778b894241c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Light">
+      <UniqueIdentifier>{e6d66d7d-e957-4c24-bd73-32b960fc6221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shader\GLSL">
+      <UniqueIdentifier>{3a42cb97-bf52-43b1-8f0f-f48f99577b09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Material">
+      <UniqueIdentifier>{6c6352de-52c5-4559-b840-547c3a558c6a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application\GraphicsAppParams.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\FPSCamera.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\MayaCamera.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\Timer.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Viewing\Camera.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\Transform.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Shader\ShaderProgram.cpp">
+      <Filter>Assets\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Mesh\CommonMesh.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Mesh\GeneralMesh.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Mesh\GLStaticMeshData.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Mesh\CommonMeshGeometry.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\GraphicsContext.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\TransformStack.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\FileSystem.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Common.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Mesh\CommonMeshIO.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility\MacroPreprocessor.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Shader\UberShader.cpp">
+      <Filter>Assets\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Shader\Shader.cpp">
+      <Filter>Assets\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Light\SingleLightSystem.cpp">
+      <Filter>Assets\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Light\Light.cpp">
+      <Filter>Assets\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Light\MultiLightSystem.cpp">
+      <Filter>Assets\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Material\ConstantMaterial.cpp">
+      <Filter>Assets\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Material\PhongBSDF.cpp">
+      <Filter>Assets\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Material\SmoothDiffGeo.cpp">
+      <Filter>Assets\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Material\ScatteringMaterial.cpp">
+      <Filter>Assets\Material</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Texture\Texture2D.cpp">
+      <Filter>Assets\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Texture\Texture.cpp">
+      <Filter>Assets\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\ShaderAsset.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\UniformSources.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\ShaderExpressions.cpp">
+      <Filter>Assets</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application\GraphicsAppParams.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Common.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\GraphicsContext.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GL.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\Camera.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\FPSCamera.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\MayaCamera.h">
+      <Filter>Viewing</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\Timer.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\Transform.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Shader\ShaderProgram.h">
+      <Filter>Assets\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Mesh\CommonMesh.h">
+      <Filter>Assets\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Mesh\GeneralMesh.h">
+      <Filter>Assets\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Mesh\GLStaticMeshData.h">
+      <Filter>Assets\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\TransformStack.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Light\Light.h">
+      <Filter>Assets\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Application\Keys.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\FileSystem.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility\MacroPreprocessor.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Shader\UberShader.h">
+      <Filter>Assets\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Shader\Shader.h">
+      <Filter>Assets\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Light\SingleLightSystem.h">
+      <Filter>Assets\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Light\LightSystem.h">
+      <Filter>Assets\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Light\MultiLightSystem.h">
+      <Filter>Assets\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\SmoothDiffGeo.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\BSDF.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\ConstantMaterial.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\DiffGeo.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\Material.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\PhongBSDF.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Material\ScatteringMaterial.h">
+      <Filter>Assets\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\ShaderAsset.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Texture\Texture2D.h">
+      <Filter>Assets\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Texture\Texture.h">
+      <Filter>Assets\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\UniformSources.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\ShaderExpressions.h">
+      <Filter>Assets</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Shader\GLSL\Multi.LightSystem">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Phong.BSDF">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Scattering.Material">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Single.LightSystem">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Smooth.DiffGeo">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Constant.Material">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Light">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Uber.vert">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+    <None Include="Assets\Shader\GLSL\Uber.frag">
+      <Filter>Assets\Shader\GLSL</Filter>
+    </None>
+  </ItemGroup>
+</Project>
