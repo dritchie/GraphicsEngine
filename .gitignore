@@ -2,3 +2,7 @@
 *.suo
 *.user
 *.dll
+Debug
+Release
+*.ipch
+*.opensdf

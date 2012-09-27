@@ -151,6 +151,8 @@
     <None Include="Assets\Shader\GLSL\Multi.LightSystem" />
     <None Include="Assets\Shader\GLSL\Phong.BSDF" />
     <None Include="Assets\Shader\GLSL\Scattering.Material" />
+    <None Include="Assets\Shader\GLSL\SimplePhong.frag" />
+    <None Include="Assets\Shader\GLSL\SimplePhong.vert" />
     <None Include="Assets\Shader\GLSL\Single.LightSystem" />
     <None Include="Assets\Shader\GLSL\Smooth.DiffGeo" />
     <None Include="Assets\Shader\GLSL\Uber.frag" />
