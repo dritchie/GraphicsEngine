@@ -2,11 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLTKGraphicsApp", "FLTKGraphicsApp\FLTKGraphicsApp.vcxproj", "{E9F23020-F440-47E8-8008-993E9304A784}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F} = {B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}
-	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GraphicsEngine", "GraphicsEngine\GraphicsEngine.vcxproj", "{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BunnyExample", "Examples\BunnyExample\BunnyExample.vcxproj", "{E8853879-92A8-4D9E-BC54-407C78A0F166}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UberShaderExample", "Examples\UberShaderExample\UberShaderExample.vcxproj", "{7960DD12-527A-4FE9-8A62-DC9E5C4702EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E9F23020-F440-47E8-8008-993E9304A784} = {E9F23020-F440-47E8-8008-993E9304A784}
+		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F} = {B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +27,14 @@ Global
 		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}.Debug|Win32.Build.0 = Debug|Win32
 		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}.Release|Win32.ActiveCfg = Release|Win32
 		{B5C5D6E5-2F47-4830-B82D-E5EFC7C0783F}.Release|Win32.Build.0 = Release|Win32
+		{E8853879-92A8-4D9E-BC54-407C78A0F166}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8853879-92A8-4D9E-BC54-407C78A0F166}.Debug|Win32.Build.0 = Debug|Win32
+		{E8853879-92A8-4D9E-BC54-407C78A0F166}.Release|Win32.ActiveCfg = Release|Win32
+		{E8853879-92A8-4D9E-BC54-407C78A0F166}.Release|Win32.Build.0 = Release|Win32
+		{7960DD12-527A-4FE9-8A62-DC9E5C4702EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7960DD12-527A-4FE9-8A62-DC9E5C4702EF}.Debug|Win32.Build.0 = Debug|Win32
+		{7960DD12-527A-4FE9-8A62-DC9E5C4702EF}.Release|Win32.ActiveCfg = Release|Win32
+		{7960DD12-527A-4FE9-8A62-DC9E5C4702EF}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

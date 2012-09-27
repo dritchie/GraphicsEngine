@@ -11,50 +11,44 @@
 #include "Viewing/Camera.h"
 
 
-// Remove this
-namespace GraphicsEngine
-{
-	class CommonMesh;
-}
-
-
 /**
-Main application logic goes here
+Abstract base class for graphics applications
 **/
 class GraphicsApp
 {
 public:
 
 	GraphicsApp();
-	~GraphicsApp();
 
-	void Init(const std::string& paramfile);
-	void InitGraphics(GraphicsEngine::GraphicsContext* ctx);
+	virtual void Init(const std::string& paramfile);
+	virtual void InitGraphics(GraphicsEngine::GraphicsContext* ctx);
 
-	void Render();
-	void Resize(int w, int h);
+	virtual void Render() = 0;
+	virtual void Resize(int w, int h);
 
 	// Keyboard events
-	void KeyDown(int key, const GraphicsEngine::ModifierKeys& mods);
-	void KeyUp(int key, const GraphicsEngine::ModifierKeys& mods);
+	virtual void KeyDown(int key, const GraphicsEngine::ModifierKeys& mods) = 0;
+	virtual void KeyUp(int key, const GraphicsEngine::ModifierKeys& mods) = 0;
 
 	// Mouse events
-	void MouseDown(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods);
-	void MouseUp(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods);
-	void MouseMove(int x, int y, const GraphicsEngine::ModifierKeys& mods);
-	void MouseDrag(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods);
-	void MouseWheel(int delta, const GraphicsEngine::ModifierKeys& mods);
+	virtual void MouseDown(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods) = 0;
+	virtual void MouseUp(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods) = 0;
+	virtual void MouseMove(int x, int y, const GraphicsEngine::ModifierKeys& mods) = 0;
+	virtual void MouseDrag(int button, int x, int y, const GraphicsEngine::ModifierKeys& mods) = 0;
+	virtual void MouseWheel(int delta, const GraphicsEngine::ModifierKeys& mods) = 0;
 
-	void Timestep(float dt);
+	// The march of time...
+	virtual void Timestep(float dt) = 0;
+
+	// Call this static method in your main() to get everything running
+	// Can only have one app at a time running; FLTK's event loop will take over once you call this
+	static int Launch(GraphicsApp* app, const std::string& paramFilename, int argc, char** argv);
 
 	GraphicsEngine::GraphicsAppParams params;
 
-private:
-
-	void InitCamera();
+protected:
 
 	GraphicsEngine::GraphicsContext* context;
-	GraphicsEngine::InteractiveCamera* camera;
 };
 
 

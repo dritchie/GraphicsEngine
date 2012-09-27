@@ -17,4 +17,15 @@ zfar		100.0
 
 ## Shader path: semi-colon separated list of places to look for files
 ## when loading shaders
-shaderPath	../GraphicsEngine/Assets/Shader/GLSL/
+shaderPath	../../GraphicsEngine/Assets/Shader/GLSL/
+
+## Window Size
+windowWidth		800
+windowHeight	600
+
+## App Name
+appName			UberShaderExample
+
+
+
+### Other application-specific parameters go here! ###
