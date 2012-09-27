@@ -39,8 +39,7 @@ namespace GraphicsEngine
 		vector<string> lines;
 		lines.push_back(Define("MAX_NUM_LIGHTS", numLights));
 		lines.push_back("#include \"Multi.LightSystem\"");
-
-		code.AddFragCode(Block("LIGHT_SYSTEM", lines));
+		code.fragCode.push_back(Block("LIGHT_SYSTEM", lines));
 	}
 
 	void MultiLightSystem::Bind()

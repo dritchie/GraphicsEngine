@@ -11,7 +11,7 @@ namespace GraphicsEngine
 
 	void SingleLightSystem::ShaderCode(ShaderAssetCode& code)
 	{
-		code.AddFragCode(Block("LIGHT_SYSTEM", "#include \"Single.LightSystem\""));
+		code.fragCode.push_back(Block("LIGHT_SYSTEM", "#include \"Single.LightSystem\""));
 	}
 
 	void SingleLightSystem::Bind()

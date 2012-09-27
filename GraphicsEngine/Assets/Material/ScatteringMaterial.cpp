@@ -16,7 +16,7 @@ namespace GraphicsEngine
 
 	void ScatteringMaterial::ShaderCode(ShaderAssetCode& code)
 	{
-		code.AddFragCode(Block("MATERIAL", "#include \"Scattering.Material\""));
+		code.fragCode.push_back(Block("MATERIAL", "#include \"Scattering.Material\""));
 
 		bsdf->ShaderCode(code);
 		diffGeo->ShaderCode(code);

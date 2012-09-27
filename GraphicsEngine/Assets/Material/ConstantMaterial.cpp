@@ -13,7 +13,7 @@ namespace GraphicsEngine
 
 	void ConstantMaterial::ShaderCode(ShaderAssetCode& code)
 	{
-		code.AddFragCode(Block("MATERIAL", "#include \"Constant.Material\""));
+		code.fragCode.push_back(Block("MATERIAL", "#include \"Constant.Material\""));
 	}
 
 	void ConstantMaterial::Bind()

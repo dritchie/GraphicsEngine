@@ -88,7 +88,6 @@
     <ClCompile Include="Assets\Mesh\GeneralMesh.cpp" />
     <ClCompile Include="Assets\Mesh\GLStaticMeshData.cpp" />
     <ClCompile Include="Assets\ShaderAsset.cpp" />
-    <ClCompile Include="Assets\ShaderExpressions.cpp" />
     <ClCompile Include="Assets\Shader\Shader.cpp" />
     <ClCompile Include="Assets\Shader\ShaderProgram.cpp" />
     <ClCompile Include="Assets\Shader\UberShader.cpp" />
@@ -124,7 +123,6 @@
     <ClInclude Include="Assets\Mesh\GeneralMesh.h" />
     <ClInclude Include="Assets\Mesh\GLStaticMeshData.h" />
     <ClInclude Include="Assets\ShaderAsset.h" />
-    <ClInclude Include="Assets\ShaderExpressions.h" />
     <ClInclude Include="Assets\Shader\Shader.h" />
     <ClInclude Include="Assets\Shader\ShaderProgram.h" />
     <ClInclude Include="Assets\Shader\UberShader.h" />

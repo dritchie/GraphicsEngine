@@ -30,7 +30,7 @@ namespace GraphicsEngine
 		shine->name = "PHONG_SHINE"; shine->ShaderCode(code);
 
 		// Finally, we need to define the overall BSDF block
-		code.AddFragCode(Block("BSDF", "#include \"Phong.BSDF\""));
+		code.fragCode.push_back(Block("BSDF", "#include \"Phong.BSDF\""));
 	}
 
 	void PhongBSDF::Bind()

@@ -5,9 +5,9 @@ namespace GraphicsEngine
 {
 	void SmoothDiffGeo::ShaderCode(ShaderAssetCode& code)
 	{
-		code.AddVertCode(Define("PLUMB_NORMALS", ""));
-		code.AddFragCode(Define("PLUMB_NORMALS", ""));
-		code.AddFragCode(Block("DIFF_GEO", "#include \"Smooth.DiffGeo\""));
+		code.vertCode.push_back(Define("PLUMB_NORMALS", ""));
+		code.fragCode.push_back(Define("PLUMB_NORMALS", ""));
+		code.fragCode.push_back(Block("DIFF_GEO", "#include \"Smooth.DiffGeo\""));
 	}
 
 	void SmoothDiffGeo::Bind()

@@ -9,13 +9,6 @@ namespace GraphicsEngine
 {
 	struct ShaderAssetCode
 	{
-	public:
-		void AddVertCode(const std::string& code);
-		void AddGeoCode(const std::string& code);
-		void AddTessControlCode(const std::string& code);
-		void AddTessEvalCode(const std::string& code);
-		void AddFragCode(const std::string& code);
-	private:
 		std::vector<std::string> vertCode;
 		std::vector<std::string> geoCode;
 		std::vector<std::string> tessControlCode;

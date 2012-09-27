@@ -129,9 +129,6 @@
     <ClCompile Include="Assets\UniformSources.cpp">
       <Filter>Assets</Filter>
     </ClCompile>
-    <ClCompile Include="Assets\ShaderExpressions.cpp">
-      <Filter>Assets</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GraphicsAppParams.h">
@@ -237,9 +234,6 @@
       <Filter>Assets\Texture</Filter>
     </ClInclude>
     <ClInclude Include="Assets\UniformSources.h">
-      <Filter>Assets</Filter>
-    </ClInclude>
-    <ClInclude Include="Assets\ShaderExpressions.h">
       <Filter>Assets</Filter>
     </ClInclude>
   </ItemGroup>

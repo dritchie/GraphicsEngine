@@ -79,17 +79,6 @@ void VectorArrayCopy(std::vector<T>& dst, T* src, UINT n)
 		dst[i] = src[i];
 }
 
-template<typename T>
-bool VectorContains(const std::vector<T>& vec, const T& val)
-{
-	for (auto it = vec.begin(); it != vec.end(); it++)
-	{
-		if (*it == val)
-			return true;
-	}
-	return false;
-}
-
 std::vector<std::string> SplitString(const std::string& str, const std::string& delim);
 
 std::string LStrip(const std::string& str, char delim);
