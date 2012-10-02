@@ -30,6 +30,8 @@ namespace GraphicsEngine
 			pflags |= aiProcess_CalcTangentSpace;
 
 		const aiScene* scene = imp.ReadFile(filename, pflags);
+		if (scene == NULL)
+			FatalError(string("CommonMesh::Load - No such file '" + filename + "'"))
 
 		// First, convert all the meshes into CommonMeshes
 		vector<CommonMesh> meshes; meshes.resize(scene->mNumMeshes);
