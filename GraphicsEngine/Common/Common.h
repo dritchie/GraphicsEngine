@@ -18,7 +18,7 @@ across the board
 #include <iostream>
 #include <cassert>
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
 #endif
 
@@ -35,14 +35,14 @@ across the board
 #define SAFEDELETE(p) if (p) delete (p);
 
 // Cross-platform safe printf
-#ifdef WIN32
+#ifdef _WIN32
 #define SafePrintf sprintf_s
 #else
 #define SafePrintf snprintf
 #endif
 
 // Used for throwing fatal errors
-#ifdef WIN32
+#ifdef _WIN32
 #define FatalError(msg) { MessageBox(NULL, (msg).c_str(), "GraphicsEngine - FatalError", MB_OK); throw 0; }
 //#define FatalError(msg) { std::cerr << "GraphicsEngine - FatalError: " << (msg).c_str() << std::endl; throw 0; }
 #else
@@ -51,7 +51,7 @@ across the board
 
 
 // Non-fatal warnings
-#ifdef WIN32
+#ifdef _WIN32
 #define Warning(msg) { MessageBox(NULL, (msg).c_str(), "GraphicsEngine - Warning", MB_OK); }
 #else
 #define Warning(msg) { std::cerr << "GraphicsEngine - Warning: " << (msg).c_str() << std::endl; }
