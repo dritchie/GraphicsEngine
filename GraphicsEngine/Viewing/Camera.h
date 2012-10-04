@@ -21,7 +21,7 @@ namespace GraphicsEngine
 	public:
 
 		Camera();
-		Camera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up);
+		Camera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY());
 
 		Transform GetLookAtTransform();
 
@@ -50,8 +50,8 @@ namespace GraphicsEngine
 	public:
 
 		InteractiveCamera() : Camera() {}
-		InteractiveCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up)
-			: Camera(eye,lookAt,up) {}
+		InteractiveCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY())
+			: Camera(eye,lookAt,up, worldUp) {}
 
 		// Event handlers return 'true' if the application needs to re-render
 		// as a consequence of their actions.

@@ -17,7 +17,7 @@ namespace GraphicsEngine
 	public:
 
 		FPSCamera();
-		FPSCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up);
+		FPSCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY());
 
 		// Accessors
 		const float& MoveSpeed() const;

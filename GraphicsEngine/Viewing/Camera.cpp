@@ -15,8 +15,8 @@ namespace GraphicsEngine
 	{
 	}
 
-	Camera::Camera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up)
-		: absUp(0.0f,1.0f,0.0f)
+	Camera::Camera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up, const Vector3f& worldUp)
+		: absUp(worldUp)
 	{
 		Reset(eye, lookAt, up);
 	}

@@ -20,8 +20,8 @@ namespace GraphicsEngine
 	{
 	}
 
-	MayaCamera::MayaCamera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up)
-		: InteractiveCamera(eye,lookAt,up),
+	MayaCamera::MayaCamera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up, const Vector3f& worldUp)
+		: InteractiveCamera(eye,lookAt,up,worldUp),
 		  orbitSpeed(ORBITSPEED_DEFAULT), dollySpeed(DOLLYSPEED_DEFAULT),
 		  zoomSpeed(ZOOMSPEED_DEFAULT), scrollZoomSpeed(SCROLLZOOMSPEED_DEFAULT)
 	{

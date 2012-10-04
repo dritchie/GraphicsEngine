@@ -18,7 +18,7 @@ namespace GraphicsEngine
 	public:
 
 		MayaCamera();
-		MayaCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up);
+		MayaCamera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY());
 
 		// Accessors
 		const float& OrbitSpeed() const;

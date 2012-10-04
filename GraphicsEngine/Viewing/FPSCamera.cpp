@@ -18,8 +18,8 @@ namespace GraphicsEngine
 	{
 	}
 
-	FPSCamera::FPSCamera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up)
-		: InteractiveCamera(eye,lookAt,up), movingForward(false), movingBackward(false),
+	FPSCamera::FPSCamera(const Vector3f& eye, const Vector3f& lookAt, const Vector3f& up, const Vector3f& worldUp)
+		: InteractiveCamera(eye,lookAt,up, worldUp), movingForward(false), movingBackward(false),
 		  movingLeft(false), movingRight(false),
 		  moveSpeed(MOVESPEED_DEFAULT), lookSpeed(LOOKSPEED_DEFAULT),
 		  invertY(false)
