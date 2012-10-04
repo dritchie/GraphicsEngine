@@ -21,11 +21,7 @@ GraphicsEngine.sln should be self-explanatory.
 
 Ensure that Visual Studio can find the libs and headers for the dependencies. Adding the necessary paths to the 'Microsoft.Cpp.Win32.User' property sheet is one way to do this. If you built FreeImage and/or GLEW as dynamic libraries, make sure that those .dlls are in your system Path (for command-line execution) and/or your Visual Studio bin directory (for running from within Visual Studio).
 
-### FastSTL
-
-assimp, by default, compiles with STL iterator debugging disabled. This helps speed up a lot of file loading operations done using STL classes. It also means that any code compiled with iterator debugging enabled will be incompatible with assimp. This is where the 'FastSTL' property sheet comes in: any projects that link against GraphicsEngine (which links against assimp) should include FastSTL.props. Otherwise, things will probably explode. I'm sure there's some corresponding action that must be taken when building on Unix-y systems; probably best to refer to the assimp install documentation.
-
-Note that it is also possible to compile assimp with these settings removed (at a cost to performance, obviously) if you want to avoid all of this.
+assimp, by default, compiles with STL iterator debugging disabled. This helps speed up a lot of file loading operations done using STL classes, but it also means that any code compiled with iterator debugging enabled will be incompatible with assimp--including any other static libraries that you wish to use alongside assimp. This is annoying enough that I've decided to leave iterator debugging on in GraphicsEngine. Thus, your installation of assimp must be built without 'FastSTL' properties enable. See http://assimp.sourceforge.net/lib_html/install.html for instructions on how to do this; it's very simple.
 
 ## Usage
 
