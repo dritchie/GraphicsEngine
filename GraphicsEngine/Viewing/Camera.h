@@ -23,6 +23,9 @@ namespace GraphicsEngine
 		Camera();
 		Camera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY());
 
+		void Serialize(std::ostream& stream);
+		void Deserialize(std::istream& stream);
+
 		Transform GetLookAtTransform();
 
 		// All the low-level controls

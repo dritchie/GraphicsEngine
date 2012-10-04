@@ -2,9 +2,10 @@
 #include "Common/GL.h"
 #include "Math/Transform.h"
 #include "Eigen/Geometry"
-
+#include <iostream>
 
 using namespace Eigen;
+using namespace std;
 
 
 namespace GraphicsEngine
@@ -19,6 +20,24 @@ namespace GraphicsEngine
 		: absUp(worldUp)
 	{
 		Reset(eye, lookAt, up);
+	}
+
+	void Camera::Deserialize(istream& stream)
+	{
+		Vector3f eye, lookAt, up;
+		stream >> eye.x() >> eye.y() >> eye.z();
+		stream >> lookAt.x() >> lookAt.y() >> lookAt.z();
+		stream >> up.x() >> up.y() >> up.z();
+		stream >> absUp.x() >> absUp.y() >> absUp.z();
+		Reset(eye, lookAt, up);
+	}
+
+	void Camera::Serialize(ostream& stream)
+	{
+		stream << eyePos.x() << " " << eyePos.y() << " " << eyePos.z() << " "
+			   << lookAtPoint.x() << " " << lookAtPoint.y() << " " << lookAtPoint.z() << " "
+			   << upVec.x() << " " << upVec.y() << " " << upVec.z() << " "
+			   << absUp.x() << " " << absUp.y() << " " << absUp.z();
 	}
 
 	void Camera::Reset(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up)
