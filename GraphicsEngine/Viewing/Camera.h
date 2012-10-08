@@ -26,7 +26,7 @@ namespace GraphicsEngine
 		void Serialize(std::ostream& stream);
 		void Deserialize(std::istream& stream);
 
-		Transform GetLookAtTransform();
+		Transform GetLookAtTransform() const;
 
 		// All the low-level controls
 		void Reset(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up);

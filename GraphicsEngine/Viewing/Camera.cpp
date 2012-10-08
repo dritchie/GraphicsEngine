@@ -49,7 +49,7 @@ namespace GraphicsEngine
 		leftVec = upVec.cross(lookVec);
 	}
 
-	Transform Camera::GetLookAtTransform()
+	Transform Camera::GetLookAtTransform() const
 	{
 		return Transform::LookAt(eyePos, lookAtPoint, upVec);
 	}
