@@ -22,6 +22,7 @@ namespace GraphicsEngine
 
 		Camera();
 		Camera(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp = Eigen::Vector3f::UnitY());
+		Camera(float phi, float theta, float r);		// This will effectively assume a z-up coordinate system.
 
 		void Serialize(std::ostream& stream);
 		void Deserialize(std::istream& stream);
@@ -29,7 +30,7 @@ namespace GraphicsEngine
 		Transform GetLookAtTransform() const;
 
 		// All the low-level controls
-		void Reset(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up);
+		void Reset(const Eigen::Vector3f& eye, const Eigen::Vector3f& lookAt, const Eigen::Vector3f& up, const Eigen::Vector3f& worldUp);
 		void DollyLeft(float dist);
 		void DollyForward(float dist);
 		void DollyUp(float dist);

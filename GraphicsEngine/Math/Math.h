@@ -43,6 +43,19 @@ namespace GraphicsEngine
 		return (1-t)*lo + t*hi;
 	}
 
+	template<typename T>
+	__forceinline T UniformRandom()
+	{
+		return ((T)rand())/RAND_MAX;
+	}
+
+	template<typename T>
+	__forceinline T UniformRandom(const T& lo, const T& hi)
+	{
+		T unitrand = UniformRandom<T>();
+		return Lerp(lo, hi, unitrand);
+	}
+
 	__forceinline int RoundUpPow2(int num)
 	{
 		int p = 1;
