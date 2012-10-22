@@ -22,6 +22,7 @@ public:
 
 	virtual void Init(const std::string& paramfile);
 	virtual void InitGraphics(GraphicsEngine::GraphicsContext* ctx);
+	virtual GraphicsEngine::GraphicsContext* InitAndShowUI(int argc, char** argv);
 
 	virtual void Render() = 0;
 	virtual void Resize(int w, int h);

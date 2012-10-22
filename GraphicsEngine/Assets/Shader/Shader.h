@@ -56,7 +56,7 @@ namespace GraphicsEngine
 
 	__forceinline void Shader::ShaderPath(const std::string& path)
 	{
-		shaderPath = path;
+		shaderPath = RStrip(RStrip(path, '/'), '\\') + "/";
 	}
 }
 

@@ -35,17 +35,13 @@ int GraphicsApp::Launch(GraphicsApp* app, const std::string& paramFilename, int 
 	app->Init("Parameters.txt");
 
 	// Initialize the UI (Which creates the OpenGL context)
-	FLTKGraphicsWindow wind(app, 200, 200, app->params.IntParam("windowWidth"),
-		app->params.IntParam("windowHeight"), app->params.StringParam("appName").c_str());
-	wind.end();
-	wind.resizable(wind);
-	wind.show(argc, argv);
+	GraphicsContext* ctx = app->InitAndShowUI(argc, argv);
 
 	// Initialize GraphicsEngine
-	GraphicsEngine::Initialize(&wind);
+	GraphicsEngine::Initialize(ctx);
 
 	// Initialize application graphics components
-	app->InitGraphics(&wind);
+	app->InitGraphics(ctx);
 
 	// Set the idle process
 	Fl::add_idle(idle);
@@ -75,6 +71,19 @@ void GraphicsApp::InitGraphics(GraphicsContext* ctx)
 {
 	context = ctx;
 	glEnable(GL_DEPTH_TEST);
+}
+
+GraphicsEngine::GraphicsContext* GraphicsApp::InitAndShowUI(int argc, char** argv)
+{
+	// By default, we just create a new FLTKGraphicsWindow, show it,
+	// and return that window as the GraphicsContext. Subclasses of
+	// GraphicsApp can override this to create more complicated UIs
+	FLTKGraphicsWindow* wind = new FLTKGraphicsWindow(this, 200, 200, params.IntParam("windowWidth"),
+		params.IntParam("windowHeight"), params.StringParam("appName").c_str());
+	wind->end();
+	wind->resizable(wind);
+	wind->show(argc, argv);
+	return wind;
 }
 
 void GraphicsApp::Resize(int w, int h)
