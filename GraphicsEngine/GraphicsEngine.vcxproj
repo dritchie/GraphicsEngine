@@ -105,6 +105,7 @@
     <ClCompile Include="Viewing\Camera.cpp" />
     <ClCompile Include="Viewing\FPSCamera.cpp" />
     <ClCompile Include="Viewing\MayaCamera.cpp" />
+    <ClCompile Include="Viewing\TinkercadCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GraphicsAppParams.h" />
@@ -142,6 +143,7 @@
     <ClInclude Include="Viewing\Camera.h" />
     <ClInclude Include="Viewing\FPSCamera.h" />
     <ClInclude Include="Viewing\MayaCamera.h" />
+    <ClInclude Include="Viewing\TinkercadCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\GLSL\Constant.Material" />

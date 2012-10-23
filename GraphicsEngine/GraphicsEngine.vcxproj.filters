@@ -129,6 +129,9 @@
     <ClCompile Include="Assets\UniformSources.cpp">
       <Filter>Assets</Filter>
     </ClCompile>
+    <ClCompile Include="Viewing\TinkercadCamera.cpp">
+      <Filter>Viewing</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GraphicsAppParams.h">
@@ -235,6 +238,9 @@
     </ClInclude>
     <ClInclude Include="Assets\UniformSources.h">
       <Filter>Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Viewing\TinkercadCamera.h">
+      <Filter>Viewing</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
