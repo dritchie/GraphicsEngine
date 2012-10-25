@@ -102,10 +102,13 @@ namespace GraphicsEngine
 
 	void GLStaticMeshData::Unload()
 	{
-		FreeVectorMemory(vertexAttribData);
-		glDeleteBuffers(1, &vboID);
-		glDeleteBuffers(1, &iboID);
-		loaded = false;
+		if (loaded)
+		{
+			FreeVectorMemory(vertexAttribData);
+			glDeleteBuffers(1, &vboID);
+			glDeleteBuffers(1, &iboID);
+			loaded = false;
+		}
 	}
 
 	void GLStaticMeshData::Render()

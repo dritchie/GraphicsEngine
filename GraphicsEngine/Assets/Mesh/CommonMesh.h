@@ -21,6 +21,8 @@ namespace GraphicsEngine
 	public:
 
 		CommonMesh();
+		CommonMesh(const CommonMesh& other);
+		CommonMesh& operator=(const CommonMesh& other);
 
 		// Exposing commonly-used attributes
 		// You can subclass CommonMesh if you want to expose new attributes in this way.
@@ -84,6 +86,11 @@ namespace GraphicsEngine
 		void Load(const std::string& filename, bool genNormals = false, bool genTangentSpace = false);
 
 		virtual void FromAssimpMesh(aiMesh* mesh);
+
+
+		/* Topology */
+
+		void ConnectedComponents(std::vector<CommonMesh*>& outComps);
 
 	protected:
 

@@ -19,6 +19,17 @@ namespace GraphicsEngine
 		AddVec3Attrib(VertexAttribName);
 	}
 
+	CommonMesh::CommonMesh(const CommonMesh& other)
+		: GeneralMesh(other)
+	{
+	}
+
+	CommonMesh& CommonMesh::operator=(const CommonMesh& other)
+	{
+		CopyFrom(other);
+		return *this;
+	}
+
 	bool CommonMesh::HasNormals() const
 	{
 		return HasVec3Attrib(NormalAttribName);

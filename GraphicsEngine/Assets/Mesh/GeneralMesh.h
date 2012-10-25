@@ -48,7 +48,12 @@ namespace GraphicsEngine
 
 		// Constructors & Destructor
 		GeneralMesh();
+		GeneralMesh(const GeneralMesh& other);
 		virtual ~GeneralMesh();
+
+		// Copying
+		void CopyFrom(const GeneralMesh& other);
+		GeneralMesh& operator=(const GeneralMesh& other);
 
 		// Basic property accessors
 		UINT NumVertices() const;

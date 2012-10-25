@@ -15,6 +15,31 @@ namespace GraphicsEngine
 		UnloadGLData();
 	}
 
+	GeneralMesh::GeneralMesh(const GeneralMesh& other)
+	{
+		CopyFrom(other);
+	}
+
+	GeneralMesh& GeneralMesh::operator=(const GeneralMesh& other)
+	{
+		CopyFrom(other);
+		return *this;
+	}
+
+	void GeneralMesh::CopyFrom(const GeneralMesh& other)
+	{
+		// Invalidate any loaded GL data I might have
+		UnloadGLData();
+
+		// Copy faces
+		faces = other.faces;
+
+		// Copy vertex attribs
+		floatAttribs = other.floatAttribs;
+		vec2Attribs = other.vec2Attribs;
+		vec3Attribs = other.vec3Attribs;
+	}
+
 	UINT GeneralMesh::NumVertices() const
 	{
 		if (!vec3Attribs.empty())

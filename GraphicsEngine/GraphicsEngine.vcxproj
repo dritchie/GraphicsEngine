@@ -87,6 +87,7 @@
     <ClCompile Include="Assets\Mesh\CommonMesh.cpp" />
     <ClCompile Include="Assets\Mesh\CommonMeshGeometry.cpp" />
     <ClCompile Include="Assets\Mesh\CommonMeshIO.cpp" />
+    <ClCompile Include="Assets\Mesh\CommonMeshTopology.cpp" />
     <ClCompile Include="Assets\Mesh\GeneralMesh.cpp" />
     <ClCompile Include="Assets\Mesh\GLStaticMeshData.cpp" />
     <ClCompile Include="Assets\ShaderAsset.cpp" />

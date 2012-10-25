@@ -63,6 +63,8 @@ namespace GraphicsEngine
 
 	void CommonMesh::Append(CommonMesh* other, const Transform& t)
 	{
+		UnloadGLData();
+
 		if (other->HasUVs())
 			this->AddVec2Attrib(UVAttribName);
 		if (other->HasNormals())

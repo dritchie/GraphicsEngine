@@ -132,6 +132,9 @@
     <ClCompile Include="Viewing\TinkercadCamera.cpp">
       <Filter>Viewing</Filter>
     </ClCompile>
+    <ClCompile Include="Assets\Mesh\CommonMeshTopology.cpp">
+      <Filter>Assets\Mesh</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GraphicsAppParams.h">
