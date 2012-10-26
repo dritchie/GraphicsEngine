@@ -90,11 +90,18 @@ namespace GraphicsEngine
 
 		/* Topology */
 
-		void ConnectedComponents(std::vector<CommonMesh*>& outComps);
+		void ConnectedComponents(std::vector<CommonMesh*>& outComps, bool connectCollocatedVerts = false) const;
+
+		void FuseCollocatedVertices();
 
 	protected:
 
 		Eigen::Vector3f Normal(const MeshFace& f, bool areaWeighted = false) const;
+
+	private:
+
+		// Form vertex equivalence classes based on vertex collocation
+		void VertexEquivalenceClasses(std::vector< std::vector<int> >& outClasses, float distThresh = 0.000001f) const;
 	};
 }
 

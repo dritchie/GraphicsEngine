@@ -9,6 +9,7 @@ Framework for getting graphics applications up and running. A level of abstracti
 - Eigen (http://eigen.tuxfamily.org) - Tested against version 3.1.1
 - assimp (http://assimp.sourceforge.net) - Tested against version 2.0
 - FreeImage (http://freeimage.sourceforge.net) - Tested against version 3.15.3
+- ANN (http://www.cs.umd.edu/~mount/ANN/) - Tested against version 1.1.2
 - (Optional) FLTK (http://www.fltk.org) - Tested against version 1.3.0
 
 ## Building
@@ -19,7 +20,7 @@ Currently, the only build infrastructure available is Visual Studio 2010. Howeve
 
 GraphicsEngine.sln should be self-explanatory.
 
-Ensure that Visual Studio can find the libs and headers for the dependencies. Adding the necessary paths to the 'Microsoft.Cpp.Win32.User' property sheet is one way to do this. If you built FreeImage and/or GLEW as dynamic libraries, make sure that those .dlls are in your system Path (for command-line execution) and/or your Visual Studio bin directory (for running from within Visual Studio).
+Ensure that Visual Studio can find the libs and headers for the dependencies. Adding the necessary paths to the 'Microsoft.Cpp.Win32.User' property sheet is one way to do this. If you built FreeImage, ANN and/or GLEW as dynamic libraries, make sure that those .dlls are in your system Path (for command-line execution) and/or your Visual Studio bin directory (for running from within Visual Studio).
 
 assimp, by default, compiles with STL iterator debugging disabled. This helps speed up a lot of file loading operations done using STL classes, but it also means that any code compiled with iterator debugging enabled will be incompatible with assimp--including any other static libraries that you wish to use alongside assimp. This is annoying enough that I've decided to leave iterator debugging on in GraphicsEngine. Thus, your installation of assimp must be built without 'FastSTL' properties enable. See http://assimp.sourceforge.net/lib_html/install.html for instructions on how to do this; it's very simple.
 
