@@ -228,11 +228,11 @@ namespace GraphicsEngine
 
 		// Build 'equivalence classes' of vertices by doing nearest neighbor searches
 		// from each vertex
-		unordered_set<int> seen;
+		vector<bool> seen(nPts, false);
 		for (int i = 0; i < nPts; i++)
 		{
 			// If we haven't seen this vertex already, make a new equivalence class
-			if (!seen.count(i))
+			if (!seen[i])
 			{
 				outClasses.push_back(vector<int>());
 
@@ -257,7 +257,7 @@ namespace GraphicsEngine
 				for (int j = 0; j < numPoints; j++)
 				{
 					outClasses.back().push_back(nnIdx[j]);
-					seen.insert(nnIdx[j]);
+					seen[nnIdx[j]] = true;
 				}
 			}
 		}
