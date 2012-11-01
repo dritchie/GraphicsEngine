@@ -66,7 +66,9 @@ namespace GraphicsEngine
 		while (!infile.eof())
 		{
 			infile.getline(line, 1023);
-			result.push_back(string(line));
+			string strline = string(line);
+			if (!strline.empty())
+				result.push_back(strline);
 		}
 		infile.close();
 		
