@@ -60,6 +60,8 @@ namespace GraphicsEngine
 
 		void ComputeNormals();
 
+		Eigen::Vector3f Normal(const MeshFace& f, bool areaWeighted = false) const;
+
 		virtual void Append(CommonMesh* other, const Transform& t);
 
 		// Create an XY plane centered at the origin with the requested width,
@@ -93,10 +95,6 @@ namespace GraphicsEngine
 		void ConnectedComponents(std::vector<CommonMesh*>& outComps, bool connectCollocatedVerts = false) const;
 
 		void FuseCollocatedVertices();
-
-	protected:
-
-		Eigen::Vector3f Normal(const MeshFace& f, bool areaWeighted = false) const;
 
 	private:
 
