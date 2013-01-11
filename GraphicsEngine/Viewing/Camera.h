@@ -41,6 +41,14 @@ namespace GraphicsEngine
 		void OrbitUp(float theta);
 		void TrackTo(const Eigen::Vector3f& newPos);
 
+		// Accessors
+		__forceinline Eigen::Vector3f EyePos() {return eyePos;}
+		__forceinline Eigen::Vector3f LookAtPoint() {return lookAtPoint;}
+		__forceinline Eigen::Vector3f LookVec() {return lookVec;}
+		__forceinline Eigen::Vector3f UpVec() {return upVec;}
+		__forceinline Eigen::Vector3f LeftVec() {return leftVec;}
+		__forceinline Eigen::Vector3f AbsoluteUpVec() {return absUp;}
+
 	protected:
 		Eigen::Vector3f eyePos, lookAtPoint, lookVec, upVec, leftVec, absUp;
 	};
